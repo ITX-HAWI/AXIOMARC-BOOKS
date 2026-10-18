@@ -144,11 +144,17 @@ img { display: block; max-width: 100%; }
   will-change: transform;
 }
 .book-card:hover { box-shadow: var(--shadow); border-color: rgba(176, 141, 62, 0.5); }
-.book-card .cover-tilt { transform: translateZ(46px); margin-bottom: 20px; }
+.book-card .cover-tilt {
+  transform: translateZ(46px); margin-bottom: 20px;
+  background: linear-gradient(150deg, #d9b45f 0%, #b08d3e 55%, #7d5f24 100%);
+  border-radius: 14px; padding: 20px 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 14px 30px -14px rgba(143, 111, 44, 0.55);
+}
 .book-card .cover-tilt img {
-  width: 100%; max-width: 190px; margin: 0 auto; border-radius: 4px 8px 8px 4px;
-  border: 1px solid rgba(25, 23, 19, 0.22);
-  box-shadow: 0 22px 44px -16px rgba(25, 23, 19, 0.55);
+  width: 100%; max-width: 165px; margin: 0 auto; border-radius: 4px 8px 8px 4px;
+  border: 1px solid rgba(25, 23, 19, 0.28);
+  box-shadow: 0 14px 28px -12px rgba(25, 23, 19, 0.5);
+  aspect-ratio: 2 / 3; object-fit: cover;
 }
 /* Touch devices: no hover tilt exists, so drop the 3D layer for crisp rendering */
 @media (hover: none) {
