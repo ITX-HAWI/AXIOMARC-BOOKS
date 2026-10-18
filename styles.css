@@ -147,7 +147,13 @@ img { display: block; max-width: 100%; }
 .book-card .cover-tilt { transform: translateZ(46px); margin-bottom: 20px; }
 .book-card .cover-tilt img {
   width: 100%; max-width: 190px; margin: 0 auto; border-radius: 4px 8px 8px 4px;
-  box-shadow: 0 18px 40px -18px rgba(25, 23, 19, 0.45);
+  border: 1px solid rgba(25, 23, 19, 0.22);
+  box-shadow: 0 22px 44px -16px rgba(25, 23, 19, 0.55);
+}
+/* Touch devices: no hover tilt exists, so drop the 3D layer for crisp rendering */
+@media (hover: none) {
+  .book-card .cover-tilt { transform: none; }
+  .book-card .badge { transform: none; }
 }
 .book-card h3 { font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 6px; }
 .book-card .tagline { color: var(--ink-soft); font-size: 0.93rem; margin-bottom: 16px; min-height: 2.8em; }
